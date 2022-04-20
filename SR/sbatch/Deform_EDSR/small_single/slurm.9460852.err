@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+    import utility
+  File "/home/ywan1053/UNSR-train/utility.py", line 7, in <module>
+    import matplotlib
+  File "/home/ywan1053/.conda/envs/super/lib/python3.6/site-packages/matplotlib/__init__.py", line 174, in <module>
+    _check_versions()
+  File "/home/ywan1053/.conda/envs/super/lib/python3.6/site-packages/matplotlib/__init__.py", line 159, in _check_versions
+    from . import ft2font
+ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /home/ywan1053/.conda/envs/super/lib/python3.6/site-packages/matplotlib/ft2font.cpython-36m-x86_64-linux-gnu.so)

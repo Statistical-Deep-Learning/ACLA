@@ -1,0 +1,55 @@
+def set_template(args):
+    # Set the templates here
+    if args.template.find('RCAN_HAN_pretrained_gammaL0C0') >= 0:
+        args.model = 'RCAN_HAN'
+        args.save = 'RCAN_HAN_pretrained_new'
+        args.pre_train = '/data/yyang409/yancheng/SR_results/RCAN_HAN_x2_pretrained_new/RCAN_HAN_pretrained_new/model/model_best.pt'
+        args.result_path = '/data/yyang409/yancheng/SR_results_torch16/SR_outputs/'
+        args.data_test = 'MyImage'
+        args.n_resgroups = 10
+        args.n_resblocks = 20
+        args.n_feats = 64
+        args.scale = '2'
+        args.test_only = True
+        args.chop = True
+        args.save_results = True
+        args.ext = 'img'
+        args.print_model = False
+        args.dir_data = '/data/yyang409/yancheng/data/SR/test_data/'
+        args.testpath = '/data/yyang409/yancheng/data/SR/test_data/LR/LRBI'
+
+    if args.template.find('RCAN_HAN_x2_scratch_gammaL1C1_fixed') >= 0:
+        args.model = 'RCAN_HAN'
+        args.save = 'RCAN_HAN_x2_scratch_gammaL1C1_fixed'
+        args.pre_train = '/data/yyang409/yancheng/SR_baseline_results/RCAN_HAN/x2/RCAN_HAN_x2_scratch_gammaL1C1_fixed/model/model_best.pt'
+        args.result_path = '/data/yyang409/yancheng/SR_results_torch16/SR_outputs/'
+        args.data_test = 'MyImage'
+        args.n_resgroups = 10
+        args.n_resblocks = 20
+        args.n_feats = 64
+        args.scale = '2'
+        args.test_only = True
+        args.chop = True
+        args.save_results = True
+        args.ext = 'img'
+        args.print_model = False
+        args.dir_data = '/data/yyang409/yancheng/data/SR/test_data/'
+        args.testpath = '/data/yyang409/yancheng/data/SR/test_data/LR/LRBI'
+
+    if args.template.find('HAN_NL') >= 0:
+        args.model = 'HAN_NL_DESIGN_EARLY'
+        args.save = 'HAN_NL_DESIGN_EARLY'
+        args.pre_train = '/data/yyang409/yancheng/SR_results_torch16/HAN_NL_DESIGN_EARLY_x2/HAN_NL_DESIGN_EARLY_scratch/model/model_best.pt'
+        args.result_path = '/data/yyang409/yancheng/SR_results_torch16/SR_outputs/'
+        args.data_test = 'MyImage'
+        args.n_resgroups = 10
+        args.n_resblocks = 20
+        args.n_feats = 64
+        args.scale = '2'
+        args.test_only = True
+        args.chop = True
+        args.save_results = True
+        args.ext = 'img'
+        args.print_model = False
+        args.dir_data = '/data/yyang409/yancheng/data/SR/test_data/'
+        args.testpath = '/data/yyang409/yancheng/data/SR/test_data/LR/LRBI'

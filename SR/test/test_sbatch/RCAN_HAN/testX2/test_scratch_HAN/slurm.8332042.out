@@ -1,0 +1,35 @@
+Making model...
+Loading model from /data/yyang409/yancheng/SR_baseline_results/RCAN_HAN/x2/RCAN_HAN_x2_scratch_gammaL1C1_fixed/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 1.78s, ave time: 0.36s
+
+Making model...
+Loading model from /data/yyang409/yancheng/SR_baseline_results/RCAN_HAN/x2/RCAN_HAN_x2_scratch_gammaL1C1_fixed/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 5.56s, ave time: 0.40s
+
+Making model...
+Loading model from /data/yyang409/yancheng/SR_baseline_results/RCAN_HAN/x2/RCAN_HAN_x2_scratch_gammaL1C1_fixed/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 34.25s, ave time: 0.34s
+
+Making model...
+Loading model from /data/yyang409/yancheng/SR_baseline_results/RCAN_HAN/x2/RCAN_HAN_x2_scratch_gammaL1C1_fixed/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 105.43s, ave time: 1.05s
+
+Making model...
+Loading model from /data/yyang409/yancheng/SR_baseline_results/RCAN_HAN/x2/RCAN_HAN_x2_scratch_gammaL1C1_fixed/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 139.64s, ave time: 1.28s
+

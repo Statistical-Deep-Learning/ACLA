@@ -1,0 +1,35 @@
+Making model...
+Loading model from /data/yyang409/yancheng/SR_results_torch16/HAN_NL_DESIGN_EARLY_x2/HAN_NL_DESIGN_EARLY_scratch/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 2.82s, ave time: 0.56s
+
+Making model...
+Loading model from /data/yyang409/yancheng/SR_results_torch16/HAN_NL_DESIGN_EARLY_x2/HAN_NL_DESIGN_EARLY_scratch/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 8.10s, ave time: 0.58s
+
+Making model...
+Loading model from /data/yyang409/yancheng/SR_results_torch16/HAN_NL_DESIGN_EARLY_x2/HAN_NL_DESIGN_EARLY_scratch/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 49.96s, ave time: 0.50s
+
+Making model...
+Loading model from /data/yyang409/yancheng/SR_results_torch16/HAN_NL_DESIGN_EARLY_x2/HAN_NL_DESIGN_EARLY_scratch/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 99.03s, ave time: 0.99s
+
+Making model...
+Loading model from /data/yyang409/yancheng/SR_results_torch16/HAN_NL_DESIGN_EARLY_x2/HAN_NL_DESIGN_EARLY_scratch/model/model_best.pt
+
+Evaluation:
+[MyImage x2]	PSNR: 0.000 (Best: 0.000 @epoch 1)
+Total time: 127.17s, ave time: 1.17s
+

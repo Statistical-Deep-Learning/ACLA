@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# PANET Train
+#python main.py --n_GPUs 4 --lr 1e-4 --decay 200-400-600-800 --epoch 1000 --batch_size 16 --n_resblocks 80 --save_models --model PANET --scale 1 --patch_size 48 --save PANET_DEMOSAIC --n_feats 64 --data_train DIV2K --chop
+# Test
+python main.py --model PANET --save_results --n_GPUs 1 --chop --data_test McM+Kodak24+CBSD68+Urban100 --scale 1 --pre_train ../model_best.pt --test_only
