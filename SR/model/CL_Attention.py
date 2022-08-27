@@ -95,3 +95,47 @@ class CL_Attention(nn.Module):
             out = self.bn(out)
             out = out + query_layer
         return out
+
+class CLA(nn.Module):
+    def __init__(self, channel_num, key_num, ref_num, dp_conv=False):
+        super(CLA, self).__init__()
+        self.key_num = key_num
+        self.dp_conv = dp_conv
+        self.ref_num = ref_num
+        self.conv_offset = nn.Conv2d(channel_num, 2 * key_num * ref_num, 1)
+        self.conv_attn = nn.Sequential(nn.Conv2d(channel_num, key_num * ref_num, 1), nn.Softmax(1))
+        self.conv_refer = nn.Conv2d(channel_num, channel_num, 1)
+        self.depthwise_conv = nn.Conv2d(channel_num,
+                                        channel_num,
+                                        3,
+                                        1, (3 - 1) // 2,
+                                        groups=channel_num,
+                                        bias=False)
+        self.bn = nn.BatchNorm2d(channel_num)
+            
+    def forward(self, query_layer, key_layers):
+        
+        b, c, h, w = query_layer.shape
+        attn_weights = self.conv_attn(query_layer)
+        offset = self.conv_offset(query_layer)
+        weight = torch.eye(c)
+        weight = weight[:, :, None, None]
+        attn_weights = attn_weights.unsqueeze(2)
+
+        for l in range(self.ref_num):
+            key_feature = self.conv_refer(key_layers[l])
+            for i in range(self.key_num):
+                start_index = l * self.key_num + i
+                end_index = l * self.key_num + i + 2
+                sampled_key = deform_conv2d(key_feature, offset[:,  start_index:end_index, :, :], weight)
+                sampled_keys.append(sampled_key.unsqueeze(1))
+
+        sampled_keys = torch.cat((sampled_keys), dim=1)
+        out = attn_weights * sampled_keys
+        out = torch.sum(out, dim=1, keepdim=False)
+
+        if self.dp_conv:
+            out = self.depthwise_conv(out)
+            out = self.bn(out)
+            out = out + query_layer
+        return out
